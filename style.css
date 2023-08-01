@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--off-white);
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 700px;
+  width: 100%;
+  margin-top: 3em;
+  padding: 1.4em;
+  background-color: var(--white);
+  border-radius: 0.8em 0.8em 4em 0.8em;
+}
+
+.inputs {
+  gap: 30px;
+  display: flex;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: 400;
+  color: var(--smokey-grey);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.block input {
+  font-weight: 700;
+  width: 110px;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--light-grey);
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
+  color: var(--light-grey);
+}
+
+button {
+  width: 90px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  padding: 22px;
+  background-color: var(--purple);
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+button:hover {
+  background-color: hsl(259, 100%, 75%);
+}
+
+.output h1 {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.output span {
+  color: var(--purple);
+}
+
+.err-msg {
+  display: none;
+  color: var(--light-red);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.error label {
+  color: var(--light-red);
+}
+
+.error input {
+  border-color: var(--light-red);
+}
+
+.error p {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 20px;
+  }
+
+  form{
+    width: 100%;
+  }
+
+  .card {
+    padding: 1em;
+    width: 350px;
+  }
+
+  .inputs {
+    margin-bottom: 1.3em;
+  }
+
+  label {
+    font-size: 0.7rem;
+  }
+
+  .block input {
+    width: 75px;
+    font-size: 1.1rem;
+  }
+
+  button {
+    width: 50px;
+    padding: 10px;
+    position: absolute;
+    transform: translate(220%, -7%);
+  }
+
+  .output  {
+    margin-top: 1.5em;
+    font-size: 1.4rem;
+  }
+
+  .err-msg {
+    font-size: 0.7rem;
+  }
+}
